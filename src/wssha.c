@@ -49,7 +49,7 @@ int32_t sha256(uint8_t *datap, uint64_t datalen,
 	// return a failure code but the hash should also be obviously invalid
 	if( !XSha256_IsReady(&xsha256) ) {
 		xil_printf("SHA Engine Not Ready\r\n");
-		return -2;
+		return -1;
 	}
 
 	// Configure the parameters for the hardware engine
